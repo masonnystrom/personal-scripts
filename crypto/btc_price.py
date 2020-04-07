@@ -3,7 +3,6 @@
 import pandas as pd 
 import plotly.express as px 
 
-
 def btc_price():
     btc = pd.read_csv('https://raw.githubusercontent.com/coinmetrics-io/data/master/csv/btc.csv')
 

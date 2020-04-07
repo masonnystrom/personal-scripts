@@ -9,6 +9,3 @@ pip install -i https://test.pypi.org/simple/ personal-scripts-mason
 ```
 
 ## Usage of Scripts
-
-```py
-from personal-scripts import ____ 
