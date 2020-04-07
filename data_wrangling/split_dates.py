@@ -14,12 +14,12 @@ def split_dates(X):
     X['date'] = pd.to_datetime(X['date'], infer_datetime_format=True)
 
     # split into day, month, year columns
-    X['day'] = X['date'].dt.day 
+    X['day'] = X['date'].dt.day
     X['month'] = X['date'].dt.month
-    X['year'] = X['date'].dt.year 
+    X['year'] = X['date'].dt.year
 
     # drop original date column
-    X = X.drop(columns = 'date')
+    X = X.drop(columns='date')
 
     # return the dataframe 
     return X
