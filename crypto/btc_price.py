@@ -1,4 +1,5 @@
-# script prints a chart of the btc price by year
+# crypto/btc_price 
+
 # imports
 import pandas as pd 
 import plotly.express as px 
