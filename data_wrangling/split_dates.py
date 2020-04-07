@@ -17,7 +17,7 @@ def split_dates(X):
     X = X.drop(columns = 'date')
 
     # return the dataframe 
-    retun X
+    return X
 
 if __name__ == "__main__":
     # only run the code below IF this script is invoked from the command-line

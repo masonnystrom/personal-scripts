@@ -12,8 +12,8 @@ def btc_price():
     btc['year'] = btc['time'].dt.year 
 
     # plot btc chart
-    gapminder = px.data.gapminder().query('year'=='2020')
-    fig = px.line(btc, x="time", y="PriceUSD",)
+    gapminder = px.data.gapminder()
+    fig = px.line(btc, x="time", y="PriceUSD")
     fig.update_layout(
         xaxis_title="year",
         yaxis_title="Price in USD",
@@ -28,8 +28,3 @@ def btc_price():
         'yanchor': 'top'})
     
     return fig
-
-if __name__ == "__main__":
-    # only run the code below IF this script is invoked from the command-line
-    # not if it is imported from another script
-    print(fig
