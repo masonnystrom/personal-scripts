@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="personal-scripts-mason", # the name that you will install via pip
-    version="1.0",
+    version="1.1",
     author="Mason Nystrom",
     author_email="masonnystrom@gmail.com",
     description="A compilation of personal python scripts",
