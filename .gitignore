@@ -1,0 +1,7 @@
+# git ignore file
+
+#ignore these files/artifacts from the distriubtion process to pypi
+build/ 
+dist/
+*.egg-info
+
