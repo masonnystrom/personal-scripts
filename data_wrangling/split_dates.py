@@ -4,7 +4,11 @@ import pandas as pd
 
 # function takes a dataframe and returns the df with day, month, year columns
 def split_dates(X):
-
+    """
+    params: pandas.Dataframe with column labeled as 'date'
+    splits the date column into years, months, days columns and deletes original column
+    """
+    X = X.copy()
     # convert to datetime format 
     X['date'] = pd.to_datetime(X['date'], infer_datetime_format=True)
 
