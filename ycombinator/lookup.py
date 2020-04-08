@@ -12,5 +12,4 @@ class yc_company(object):
 #define some companies 
 yc = pd.read_csv('yc.csv')
 
-def lookup(company):
-    for company in yc:
+# def lookup(company):
