@@ -2,19 +2,12 @@
 
 import pandas as pd 
 
-# Goal: refactor convert_names function from a functional approach to OOP approach 
+# Goal: Use inherit form DatFrame and creat our own custom DF class 
 
-# Method 
-# the dataframe a private property of the class instance, 
-# have the existing function a method inside of the class.
-
-class DataTransformer(object):
+class CustomFrame(pd.DataFrame):
     """
-    Params my_df (pd.DataFrame) with column called "abbrev"
+    Params my_df (pd.DataFrame) with column called "abbrev" which has state abbrevs
     """
-    def __init__(self,my_df):
-        self.df = my_df.copy()
-
 
     def convert_names(self):
         """
@@ -81,17 +74,22 @@ class DataTransformer(object):
             'WY': 'Wyoming'
             }
         # print(type(self.df["abbrev"])) #> <class 'pandas.core.series.Series'>
-        self.df["state_name"] = self.df["abbrev"].map(names_map)
+        self["state_name"] = self["abbrev"].map(names_map)
         # return self.df
 
 
 if __name__ == "__main__":
     
-    df = pd.DataFrame({"abbrev": ["CT", "CO", "CA", "TX"]})
-    transformer = DataTransformer(df)
-    print(transformer.df.head())
-    transformer.convert_names() # mutate df in place
-    print(transformer.df.head())
+    custom_df = CustomFrame({"abbrev": ["CT", "CO", "CA", "TX"]})
+    print(custom_df.head())
+    
+    custom_df.convert_names()
+    print(custom_df.head())
+    
+    # transformer = DataTransformer(df)
+    # print(transformer.df.head())
+    # transformer.convert_names() # mutate df in place
+    # print(transformer.df.head())
 
     # to initialize two dfs follow same method on a new df. 
 
